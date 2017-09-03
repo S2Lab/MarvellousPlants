@@ -93,7 +93,18 @@ public class ConfigLoader
     		"");
     
     // Tree // 树相关
-    public static int treeIronyWood;
+    public static int treeIronyWoodTotalGrowthStage=8;
+    public LangItem LItreeIronyWoodTotalGrowthStage=new LangItem(
+    		"铁质木最大生长阶段",
+    		"");
+    public static int treeIronyWoodAcceleratedByIronBlock=2;
+    public LangItem LItreeIronyWoodAcceleratedByIronBlock=new LangItem(
+    		"铁块对于铁质木生长的加速",
+    		"");
+    public static int treeIronyWoodAcceleratedByIronOre=1;
+    public LangItem LItreeIronyWoodAcceleratedByIronOre=new LangItem(
+    		"铁矿石对于铁质木生长的加速",
+    		"");
     
     // Display // 显示相关
     public static float displayParticleDencity;

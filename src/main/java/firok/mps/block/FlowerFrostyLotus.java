@@ -33,9 +33,9 @@ public class FlowerFrostyLotus extends BlockBush{
         {
         	// 获取效果半径之内的一个随机位置
         	int x,y,z;
-        	x=pos.getX()-freezeRadius+random.nextInt(2*freezeRadius);
+        	x=pos.getX()-freezeRadius+random.nextInt(2*freezeRadius-1);
         	y=pos.getY()-freezeRadius+random.nextInt(2*freezeRadius);
-        	z=pos.getZ()-freezeRadius+random.nextInt(2*freezeRadius);
+        	z=pos.getZ()-freezeRadius+random.nextInt(2*freezeRadius-1);
         	BlockPos posTemp=new BlockPos(x,y,z);
         	if(worldIn.getBlockState(posTemp).getBlock()==Blocks.WATER) // 如果方块是水方块
         	{
