@@ -33,6 +33,8 @@ public class BlockLoader
 	
 	public static Block flowerFrostyLotus=new FlowerFrostyLotus();
 	
+	public static Block flowerEmberDaisy=new FlowerEmberDaisy();
+	
 	// 树
 	public static Block treeIronyWoodBlock=new TreeIronyWoodBlock();
 	public static Block treeIronyWoodLeave=new TreeIronyWoodLeave();
@@ -64,6 +66,8 @@ public class BlockLoader
     	
     	register(flowerFrostyLotus,"flower_frosty_lotus");
     	
+    	register(flowerEmberDaisy,"flower_ember_daisy");
+    	
     	
     	register(treeIronyWoodBlock,"tree_irony_wood_block");
     	register(treeIronyWoodLeave,"tree_irony_wood_leave");
@@ -93,6 +97,8 @@ public class BlockLoader
         registerRender(flowerWiserFlower);
         
         registerRender(flowerFrostyLotus);
+        
+        registerRender(flowerEmberDaisy);
         
         registerRender(decorationCorrosedBlock);
         

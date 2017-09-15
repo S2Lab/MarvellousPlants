@@ -28,6 +28,32 @@ public class ConfigLoader
     		"各种效果积累的概率",
     		"");
     
+    // Buff // 状态效果相关
+    public static int idPotionWise=50;
+    public LangItem LIidPotionWise=new LangItem(
+    		"智者状态效果的id",
+    		"");
+    
+    public static float percentDamageIncreasementPotionWise=2.0f;
+    public LangItem LIpercentDamageIncreasementPotionWise=new LangItem(
+    		"智者状态下伤害增量百分比",
+    		"");
+    
+    public static int idPotionFool=51;
+    public LangItem LIidPotionFool=new LangItem(
+    		"愚者状态效果的id",
+    		"");
+    
+    public static float percentDamageDiscreasementPotionFool=0.0f;
+    public LangItem LIpercentDamageDiscreasementPotionFool=new LangItem(
+    		"愚者状态下伤害减量百分比",
+    		"");
+    
+    public static int idPotionSpaceUnstable=52;
+    public LangItem LIidPotionSpaceUnstable=new LangItem(
+    		"空间不稳定状态效果的id",
+    		"");
+    
     // Item // 物品相关
     public static int itemStoneOfCoronaExplosionRadius=20;
     public LangItem LIitemStoneOfCoronaExplosionPower=new LangItem(

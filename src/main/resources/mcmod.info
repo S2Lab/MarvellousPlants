@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
+  "modid": "mps",
   "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "description": "Marvellous Plants",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "github.com/S2Lab/MinecraftMarvellousPlants/",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Firok"],
+  "credits": "The Forge and FML guys",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
