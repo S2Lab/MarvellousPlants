@@ -2,7 +2,6 @@ package firok.mps.potion;
 
 import java.util.Random;
 
-import firok.mps.BugNeedToFix;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -27,7 +26,7 @@ public class SpaceUnstable extends Potion
 		int k = 80 >> amplifier;
         return k > 0 ? duration % k == 0 : true;
     }
-	@BugNeedToFix
+	
 	public void performEffect(EntityLivingBase entityLivingBaseIn, int p_76394_2_)
     {
         // p_76394_2_ == 效果等级

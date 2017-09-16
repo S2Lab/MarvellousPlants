@@ -13,7 +13,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
-public class Fool extends Potion
+public class Folly extends Potion
 {
 	// 愚者 buff
 	// 获得的xp几率降低 受到的伤害几率减少
@@ -21,7 +21,7 @@ public class Fool extends Potion
 	
 	
 
-	public Fool()
+	public Folly()
 	{
 		// 不是负面效果  绿黄色
 		super(false, 0xADFF2F);

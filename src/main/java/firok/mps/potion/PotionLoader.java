@@ -16,14 +16,14 @@ public class PotionLoader
     // public static Potion potionFallProtection;
 	
 	public static Potion wise			=new Wise();
-	public static Potion fool			=new Fool();
+	public static Potion folly			=new Folly();
 	public static Potion spaceUnstable	=new SpaceUnstable();
 
     public PotionLoader(FMLPreInitializationEvent event)
     {
         // potionFallProtection = new PotionFallProtection();
     	registerPotion(ConfigLoader.idPotionWise,"wise",wise);
-    	registerPotion(ConfigLoader.idPotionFool,"fool",fool);
+    	registerPotion(ConfigLoader.idPotionFool,"folly",folly);
     	registerPotion(ConfigLoader.idPotionSpaceUnstable,"space_unstable",spaceUnstable);
     }
     

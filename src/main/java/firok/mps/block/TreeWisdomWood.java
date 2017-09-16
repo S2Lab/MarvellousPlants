@@ -3,10 +3,10 @@ package firok.mps.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class TreeWiseWood extends Block
+public class TreeWisdomWood extends Block
 {
-	// 黯淡木
-	public TreeWiseWood()
+	// 智者之树
+	public TreeWisdomWood()
 	{
 		super(Material.WOOD);
 	}

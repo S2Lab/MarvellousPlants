@@ -12,13 +12,13 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class FlowerWiserFlower extends BlockBush
+public class FlowerWisdomFlower extends BlockBush
 {
 	// 智者花
 	// 掉落经验
 	
 	protected int amountXP;
-	public FlowerWiserFlower()
+	public FlowerWisdomFlower()
 	{
 		super();
 		this.setTickRandomly(true);

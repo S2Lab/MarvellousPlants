@@ -29,7 +29,7 @@ public class BlockLoader
 	public static Block flowerWoodenRootFlower=new FlowerWoodenRootFlower();
 	public static Block flowerWoodenRootBlock=new FlowerWoodenRootBlock();
 	
-	public static Block flowerWiserFlower=new FlowerWiserFlower();
+	public static Block flowerWisdomFlower=new FlowerWisdomFlower();
 	
 	public static Block flowerFrostyLotus=new FlowerFrostyLotus();
 	
@@ -38,6 +38,9 @@ public class BlockLoader
 	// 树
 	public static Block treeIronyWoodBlock=new TreeIronyWoodBlock();
 	public static Block treeIronyWoodLeave=new TreeIronyWoodLeave();
+	
+	public static Block treeTreeWisdomWood=new TreeWisdomWood();
+	public static Block treeTreeWisdomLeave=new TreeWisdomLeave();
 	
 	// 装饰性方块
 	public static Block decorationCorrosedBlock=new DecorationCorrosedBlock();
@@ -62,7 +65,7 @@ public class BlockLoader
     	register(flowerWoodenRootFlower,"flower_wooden_root_flower");
     	register(flowerWoodenRootBlock,"flower_wooden_root_block");
     	
-    	register(flowerWiserFlower,"flower_wiser_flower");
+    	register(flowerWisdomFlower,"flower_wiser_flower");
     	
     	register(flowerFrostyLotus,"flower_frosty_lotus");
     	
@@ -71,6 +74,9 @@ public class BlockLoader
     	
     	register(treeIronyWoodBlock,"tree_irony_wood_block");
     	register(treeIronyWoodLeave,"tree_irony_wood_leave");
+    	
+    	register(treeTreeWisdomWood,"tree_wisdom_wood");
+    	register(treeTreeWisdomLeave,"tree_wisdom_leave");
         
         register(decorationCorrosedBlock,"decoration_corrosed_block");
         
@@ -94,7 +100,7 @@ public class BlockLoader
         registerRender(flowerWoodenRootFlower);
         registerRender(flowerWoodenRootBlock);
         
-        registerRender(flowerWiserFlower);
+        registerRender(flowerWisdomFlower);
         
         registerRender(flowerFrostyLotus);
         

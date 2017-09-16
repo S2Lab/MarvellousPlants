@@ -23,7 +23,7 @@ public class EventLoader
     public void onPlayerDamaged(LivingHurtEvent event)
     {
     	EntityLivingBase entity= event.getEntityLiving();
-    	if(entity.getActivePotionEffect(PotionLoader.fool)!=null) // 愚者状态的效果 会覆盖 智者状态的效果
+    	if(entity.getActivePotionEffect(PotionLoader.folly)!=null) // 愚者状态的效果 会覆盖 智者状态的效果
     	{
     		event.setAmount(
     				ConfigLoader.percentDamageDiscreasementPotionFool>=0 ?

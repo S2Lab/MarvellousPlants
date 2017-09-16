@@ -14,6 +14,8 @@ import firok.mps.ability.CauseMotion;
 
 public class GrassElasticFern extends BlockGrass
 {
+	// 弹力蕨
+	// 把实体弹开
 	public GrassElasticFern()
 	{
 		super();

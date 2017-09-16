@@ -3,10 +3,10 @@ package firok.mps.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-// 黯淡树叶
-public class TreeWiseLeave extends Block
+// 智者树叶
+public class TreeWisdomLeave extends Block
 {
-	public TreeWiseLeave()
+	public TreeWisdomLeave()
 	{
 		super(Material.LEAVES);
 	}
