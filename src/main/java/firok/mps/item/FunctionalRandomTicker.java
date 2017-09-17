@@ -22,6 +22,7 @@ public class FunctionalRandomTicker extends Item
 	}
 	
 	@Override
+	@SideOnly(Side.CLIENT) // 这个标签以后可能去掉
 	public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
 		worldIn.getBlockState(pos).getBlock().randomTick(worldIn, pos, worldIn.getBlockState(pos), worldIn.rand);

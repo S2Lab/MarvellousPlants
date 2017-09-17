@@ -10,6 +10,8 @@ public class FluidLoader
 {
 	public static LinkedList<Fluid> fluids;
 	
+	// 这里所有的static类型Fluid实例不能直接使用
+	// 而是转交给getFluid()方法获得安全的液体
 	public static Fluid mud=new Mud();
 	
 	public FluidLoader(FMLPreInitializationEvent event)
@@ -34,7 +36,7 @@ public class FluidLoader
         }
 	}
 	
-	public Fluid getFluid(Fluid fluidIn)
+	public static Fluid getFluid(Fluid fluidIn)
 	{
 		for(Fluid tempFluid:fluids)
 		{
