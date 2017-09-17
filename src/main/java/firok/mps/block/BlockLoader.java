@@ -45,6 +45,8 @@ public class BlockLoader
 	// 装饰性方块
 	public static Block decorationCorrosedBlock=new DecorationCorrosedBlock();
 	
+	public static Block fluidMud=new FluidMud();
+	
 	// 实验性方块
 	public static Block blockSmokerBlock=new BlockSmokerBlock();
 
@@ -79,6 +81,8 @@ public class BlockLoader
     	register(treeTreeWisdomLeave,"tree_wisdom_leave");
         
         register(decorationCorrosedBlock,"decoration_corrosed_block");
+        
+        register(fluidMud,"fluid_mud");
         
         register(blockSmokerBlock,"exp_smoker_block");
     }
