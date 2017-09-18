@@ -10,8 +10,8 @@ import net.minecraftforge.fluids.Fluid;
 public class Mud extends Fluid
 {
 	
-	public static final ResourceLocation still = new ResourceLocation(MPs.MODID + ":" + "fluid/mercury_still");
-    public static final ResourceLocation flowing = new ResourceLocation(MPs.MODID + ":" + "fluid/mercury_flow");
+	public static final ResourceLocation still = new ResourceLocation(MPs.MODID + ":" + "fluid/mud_still");
+    public static final ResourceLocation flowing = new ResourceLocation(MPs.MODID + ":" + "fluid/mud_flow");
 
     public Mud()
     {

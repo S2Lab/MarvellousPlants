@@ -64,6 +64,8 @@ public class ConfigLoader
     		"日冕之石的燃烧时间",
     		"");
     
+    ; // 活化之光
+    
     // Mushroom // 蘑菇相关
     public static int mushroomEnderMushroomHorizontalRange=10;
     public LangItem LImushroomEnderMushroomHorizontalRange=new LangItem(
