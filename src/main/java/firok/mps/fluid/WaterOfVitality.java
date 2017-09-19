@@ -4,6 +4,7 @@ import firok.mps.MPs;
 import net.minecraft.command.EntitySelector;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.monster.*;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
@@ -15,7 +16,7 @@ public class WaterOfVitality extends Fluid
 	public static final ResourceLocation still = new ResourceLocation(MPs.MODID + ":" + "fluid/water_of_vitality_still");
     public static final ResourceLocation flowing = new ResourceLocation(MPs.MODID + ":" + "fluid/water_of_vitality_flow");
     
-    protected static HashMap<Item,Entity> summonRecipes=new HashMap<Item,Entity>();
+    protected static HashMap<Item,Class<? extends Entity>> summonRecipes=new HashMap<Item,Class<? extends Entity>>();
 
 	public WaterOfVitality(boolean _addMinecraftSummonIn)
 	{
@@ -30,21 +31,23 @@ public class WaterOfVitality extends Fluid
     		_addMinecraftSummon();
 	}
 	
-	public static void addSummonRecipe(Item itemIn,Entity entityIn)
+	public static void addSummonRecipe(Item itemIn,Class<? extends Entity> entityTypeIn)
 	{
-		summonRecipes.put(itemIn, entityIn);
+		summonRecipes.put(itemIn, entityTypeIn);
 	}
 	public static boolean hasSummon(Item itemIn)
 	{
 		return summonRecipes.containsKey(itemIn);
 	}
-	public static Entity getSummon(Item itemIn)
+	public static Class<? extends Entity> getSummon(Item itemIn)
 	{
 		return summonRecipes.get(itemIn);
 	}
 	protected static void _addMinecraftSummon()
 	{
-		// addSummonRecipe(Items.BONE,new EntitySkeleton(null));
-		
+		addSummonRecipe(Items.BONE,EntitySkeleton.class);
+		addSummonRecipe(Items.SLIME_BALL,EntitySlime.class);
+		addSummonRecipe(Items.ROTTEN_FLESH,EntityZombie.class);
+		addSummonRecipe(Items.SPIDER_EYE,EntitySpider.class);
 	}
 }

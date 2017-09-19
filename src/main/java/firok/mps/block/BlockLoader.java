@@ -46,6 +46,7 @@ public class BlockLoader
 	public static Block decorationCorrosedBlock=new DecorationCorrosedBlock();
 	
 	public static Block fluidMud=new FluidMud();
+	public static Block fluidWaterOfVitality=new FluidWaterOfVitality();
 	
 	// 实验性方块
 	public static Block blockSmokerBlock=new BlockSmokerBlock();
@@ -83,6 +84,7 @@ public class BlockLoader
         register(decorationCorrosedBlock,"decoration_corrosed_block");
         
         register(fluidMud,"fluid_mud");
+        register(fluidWaterOfVitality,"fluid_water_of_vitality");
         
         register(blockSmokerBlock,"exp_smoker_block");
     }

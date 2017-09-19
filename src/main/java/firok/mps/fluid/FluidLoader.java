@@ -13,6 +13,7 @@ public class FluidLoader
 	// 这里所有的static类型Fluid实例不能直接使用
 	// 而是转交给getFluid()方法获得安全的液体
 	public static Fluid mud=new Mud();
+	public static Fluid waterOfVitality=new WaterOfVitality(true);
 	
 	public FluidLoader(FMLPreInitializationEvent event)
 	{
@@ -20,6 +21,7 @@ public class FluidLoader
 			fluids=new LinkedList<Fluid>();
 		
 		registerFluid(event,mud);
+		registerFluid(event,waterOfVitality);
 	}
 	
 	protected void registerFluid(FMLPreInitializationEvent event,Fluid fluidIn)
