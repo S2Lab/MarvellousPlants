@@ -16,6 +16,8 @@ public class ItemLoader
 	public static Item functionalRandomTicker=new FunctionalRandomTicker();
 	public static Item functionalUpdateTicker=new FunctionalUpdateTicker();
 	
+	public static Item functionalSummonner=new FunctionalSummonner();
+	
 
     public ItemLoader(FMLPreInitializationEvent event)
     {
@@ -24,6 +26,8 @@ public class ItemLoader
         // register(itemRecipe,"recipe");
         register(functionalRandomTicker,"functional_random_ticker");
         register(functionalUpdateTicker,"functional_update_ticker");
+        
+        register(functionalSummonner,"functional_summonner");
     }
     
     @SideOnly(Side.CLIENT)
@@ -33,6 +37,8 @@ public class ItemLoader
     	// registerRender(itemRecipe);
     	registerRender(functionalRandomTicker);
     	registerRender(functionalUpdateTicker);
+    	
+    	registerRender(functionalSummonner);
     	
     }
 

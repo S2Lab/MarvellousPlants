@@ -44,7 +44,7 @@ public class WaterOfVitality extends Fluid
 	}
 	protected static void _addMinecraftSummon()
 	{
-		addSummonRecipe(Items.BONE,new EntitySkeleton());
-		Entity
+		// addSummonRecipe(Items.BONE,new EntitySkeleton(null));
+		
 	}
 }
