@@ -33,6 +33,8 @@ public class BlockLoader
 	
 	public static Block flowerFrostyLotus=new FlowerFrostyLotus();
 	
+	public static Block flowerChargeLotus=new FlowerChargeLotus();
+	
 	public static Block flowerEmberDaisy=new FlowerEmberDaisy();
 	
 	// 树
@@ -47,6 +49,7 @@ public class BlockLoader
 	
 	public static Block fluidMud=new FluidMud();
 	public static Block fluidWaterOfVitality=new FluidWaterOfVitality();
+	public static Block fluidLiquidOfRichCharge=new FluidLiquidOfRichCharge();
 	
 	// 实验性方块
 	public static Block blockSmokerBlock=new BlockSmokerBlock();
@@ -72,6 +75,8 @@ public class BlockLoader
     	
     	register(flowerFrostyLotus,"flower_frosty_lotus");
     	
+    	register(flowerChargeLotus,"flower_charge_lotus");
+    	
     	register(flowerEmberDaisy,"flower_ember_daisy");
     	
     	
@@ -85,6 +90,7 @@ public class BlockLoader
         
         register(fluidMud,"fluid_mud");
         register(fluidWaterOfVitality,"fluid_water_of_vitality");
+        register(fluidLiquidOfRichCharge,"fluid_liquid_of_rich_charge");
         
         register(blockSmokerBlock,"exp_smoker_block");
     }
@@ -109,6 +115,8 @@ public class BlockLoader
         registerRender(flowerWisdomFlower);
         
         registerRender(flowerFrostyLotus);
+        
+        registerRender(flowerChargeLotus);
         
         registerRender(flowerEmberDaisy);
         

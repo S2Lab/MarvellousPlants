@@ -18,6 +18,8 @@ public class ItemLoader
 	
 	public static Item functionalSummonner=new FunctionalSummonner();
 	
+	public static Item materialRichChargePetal=new MaterialRichChargePetal();
+	
 
     public ItemLoader(FMLPreInitializationEvent event)
     {
@@ -28,6 +30,8 @@ public class ItemLoader
         register(functionalUpdateTicker,"functional_update_ticker");
         
         register(functionalSummonner,"functional_summonner");
+        
+        register(materialRichChargePetal,"material_rich_charge_petal");
     }
     
     @SideOnly(Side.CLIENT)
@@ -39,6 +43,8 @@ public class ItemLoader
     	registerRender(functionalUpdateTicker);
     	
     	registerRender(functionalSummonner);
+    	
+    	registerRender(materialRichChargePetal);
     	
     }
 

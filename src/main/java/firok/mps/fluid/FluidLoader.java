@@ -14,6 +14,7 @@ public class FluidLoader
 	// 而是转交给getFluid()方法获得安全的液体
 	public static Fluid mud=new Mud();
 	public static Fluid waterOfVitality=new WaterOfVitality(true);
+	public static Fluid liquidOfRichCharge=new LiquidOfRichCharge();
 	
 	public FluidLoader(FMLPreInitializationEvent event)
 	{
@@ -22,6 +23,7 @@ public class FluidLoader
 		
 		registerFluid(event,mud);
 		registerFluid(event,waterOfVitality);
+		registerFluid(event,liquidOfRichCharge);
 	}
 	
 	protected void registerFluid(FMLPreInitializationEvent event,Fluid fluidIn)
