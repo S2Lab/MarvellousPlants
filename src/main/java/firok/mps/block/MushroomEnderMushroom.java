@@ -22,6 +22,7 @@ public class MushroomEnderMushroom extends BlockMushroom
 	public MushroomEnderMushroom()
 	{
 		super();
+		this.setUnlocalizedName("enderMushroom");
 	}
 	
 	// 获取传送距离

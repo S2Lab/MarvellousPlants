@@ -20,6 +20,7 @@ public class DecorationEnderBlock extends Block
 	public DecorationEnderBlock()
 	{
 		super(Material.GROUND);
+		this.setUnlocalizedName("enderBlock");
 	}
 	
 	// 获取传送距离

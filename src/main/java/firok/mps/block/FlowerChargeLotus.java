@@ -19,6 +19,7 @@ public class FlowerChargeLotus extends BlockBush
 	{
 		super();
 		this.setTickRandomly(true);
+		this.setUnlocalizedName("chargeLotus");
 	}
 	
 	// 吸引雷电

@@ -27,6 +27,7 @@ public class FlowerToxicFlower extends BlockBush
 	{
 		super();
 		this.setTickRandomly(true);
+		this.setUnlocalizedName("toxicFlower");
 		burstRadius=ConfigLoader.minEffectRadius+ConfigLoader.flowerToxicFlowerEffectRadius;
 		incrementRadius=ConfigLoader.incrementEffectRadius;
 	}

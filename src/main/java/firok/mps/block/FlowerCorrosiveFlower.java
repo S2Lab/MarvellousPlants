@@ -28,6 +28,7 @@ public class FlowerCorrosiveFlower extends BlockBush
 	{
 		super();
 		this.setTickRandomly(true);
+		this.setUnlocalizedName("corrosiveFlower");
 		corroseSpeed=ConfigLoader.flowerCorrosiveFlowerCorroseSpeed;
 		corroseRadius=ConfigLoader.minEffectRadius+ConfigLoader.flowerCorrosiveFlowerCorroseRadius;
 		

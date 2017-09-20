@@ -9,6 +9,7 @@ public class TreeEclipseWood extends Block
 	public TreeEclipseWood()
 	{
 		super(Material.WOOD);
+		this.setUnlocalizedName("eclipseWood");
 	}
 
 }

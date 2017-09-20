@@ -24,6 +24,7 @@ public class FunctionalStoneOfCorona extends Item
 	public FunctionalStoneOfCorona()
 	{
 		super();
+		this.setUnlocalizedName("functionalStoneOfCorona");
 		explosionStrength=defaultStrength;
 	}
 	

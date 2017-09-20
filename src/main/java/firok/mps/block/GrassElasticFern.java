@@ -19,6 +19,7 @@ public class GrassElasticFern extends BlockGrass
 	public GrassElasticFern()
 	{
 		super();
+		this.setUnlocalizedName("elasticFern");
 	}
 	
 	@Override

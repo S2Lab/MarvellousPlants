@@ -21,6 +21,7 @@ public class FlowerFrostyLotus extends BlockBush{
 	{
 		super();
 		this.setTickRandomly(true);
+		this.setUnlocalizedName("frostyLotus");
 		freezeSpeed=ConfigLoader.flowerFrostyLotusFreezeSpeed;
 		freezeRadius=ConfigLoader.flowerFrostyLotusFreezeRadius;
 	}

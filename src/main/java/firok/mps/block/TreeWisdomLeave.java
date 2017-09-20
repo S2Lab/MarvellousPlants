@@ -9,5 +9,6 @@ public class TreeWisdomLeave extends Block
 	public TreeWisdomLeave()
 	{
 		super(Material.LEAVES);
+		this.setUnlocalizedName("wisdomLeave");
 	}
 }

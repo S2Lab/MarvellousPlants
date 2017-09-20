@@ -22,6 +22,7 @@ public class FlowerWisdomFlower extends BlockBush
 	{
 		super();
 		this.setTickRandomly(true);
+		this.setUnlocalizedName("wisdomFlower");
 		amountXP=ConfigLoader.flowerWiserFlowerXPAmount;
 	}
 	

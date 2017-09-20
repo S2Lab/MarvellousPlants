@@ -8,5 +8,6 @@ public class FlowerWoodenRootBlock extends Block
 	public FlowerWoodenRootBlock()
 	{
 		super(Material.WOOD);
+		this.setUnlocalizedName("woodenRootBlock");
 	}
 }

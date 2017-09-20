@@ -11,5 +11,6 @@ public class DecorationCorrosedBlock extends Block{
 	public DecorationCorrosedBlock()
 	{
 		super(Material.GROUND);
+		this.setUnlocalizedName("corrosedBlock");
 	}
 }

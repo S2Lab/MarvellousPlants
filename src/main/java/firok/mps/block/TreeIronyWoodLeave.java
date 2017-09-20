@@ -9,5 +9,6 @@ public class TreeIronyWoodLeave extends Block
 	public TreeIronyWoodLeave()
 	{
 		super(Material.LEAVES);
+		this.setUnlocalizedName("ironyWoodLeave");
 	}
 }

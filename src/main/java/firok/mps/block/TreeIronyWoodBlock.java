@@ -10,5 +10,6 @@ public class TreeIronyWoodBlock extends Block
 	public TreeIronyWoodBlock()
 	{
 		super(Material.IRON);
+		this.setUnlocalizedName("ironyWoodBlock");
 	}
 }

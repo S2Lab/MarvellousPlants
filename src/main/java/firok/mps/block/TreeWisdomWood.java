@@ -9,6 +9,7 @@ public class TreeWisdomWood extends Block
 	public TreeWisdomWood()
 	{
 		super(Material.WOOD);
+		this.setUnlocalizedName("wisdomWood");
 	}
 
 }

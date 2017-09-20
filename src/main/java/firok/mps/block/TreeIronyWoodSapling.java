@@ -53,6 +53,7 @@ public class TreeIronyWoodSapling extends Block
 		super(Material.GOURD);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(GrowthStage, 0));
 		this.setTickRandomly(true);
+		this.setUnlocalizedName("ironyWoodSapling");
 	}
 	
 	@Override

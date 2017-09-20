@@ -14,6 +14,7 @@ public class FlowerWoodenRootFlower extends BlockBush
 	public FlowerWoodenRootFlower()
 	{
 		super();
+		this.setUnlocalizedName("woodenRootFlower");
 	}
 	
 	// 判断是否能种植在选定的方块上

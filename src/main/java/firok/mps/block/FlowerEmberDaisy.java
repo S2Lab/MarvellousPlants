@@ -9,5 +9,6 @@ public class FlowerEmberDaisy extends BlockBush
 	public FlowerEmberDaisy()
 	{
 		super();
+		this.setUnlocalizedName("emberDaisy");
 	}
 }

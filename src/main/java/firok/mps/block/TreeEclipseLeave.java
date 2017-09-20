@@ -9,5 +9,6 @@ public class TreeEclipseLeave extends Block
 	public TreeEclipseLeave()
 	{
 		super(Material.LEAVES);
+		this.setUnlocalizedName("eclipseLeave");
 	}
 }
