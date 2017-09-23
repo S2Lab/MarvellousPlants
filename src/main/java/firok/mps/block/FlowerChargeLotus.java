@@ -3,6 +3,7 @@ package firok.mps.block;
 import java.util.Random;
 
 import firok.mps.common.ConfigLoader;
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.effect.EntityLightningBolt;
@@ -20,6 +21,7 @@ public class FlowerChargeLotus extends BlockBush
 		super();
 		this.setTickRandomly(true);
 		this.setUnlocalizedName("chargeLotus");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 	}
 	
 	// 吸引雷电

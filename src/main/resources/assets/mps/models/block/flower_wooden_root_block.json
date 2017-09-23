@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "mps:blocks/flower_wooden_root_block"
+	}
+}

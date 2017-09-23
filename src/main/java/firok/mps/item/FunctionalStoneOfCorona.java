@@ -1,5 +1,6 @@
 package firok.mps.item;
 
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -25,6 +26,7 @@ public class FunctionalStoneOfCorona extends Item
 	{
 		super();
 		this.setUnlocalizedName("functionalStoneOfCorona");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 		explosionStrength=defaultStrength;
 	}
 	

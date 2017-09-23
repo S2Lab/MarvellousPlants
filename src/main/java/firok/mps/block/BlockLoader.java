@@ -71,7 +71,7 @@ public class BlockLoader
     	register(flowerWoodenRootFlower,"flower_wooden_root_flower");
     	register(flowerWoodenRootBlock,"flower_wooden_root_block");
     	
-    	register(flowerWisdomFlower,"flower_wiser_flower");
+    	register(flowerWisdomFlower,"flower_wisdom_flower");
     	
     	register(flowerFrostyLotus,"flower_frosty_lotus");
     	
@@ -119,6 +119,12 @@ public class BlockLoader
         registerRender(flowerChargeLotus);
         
         registerRender(flowerEmberDaisy);
+        
+        registerRender(treeIronyWoodBlock);
+        registerRender(treeIronyWoodLeave);
+        
+        registerRender(treeTreeWisdomWood);
+        registerRender(treeTreeWisdomLeave);
         
         registerRender(decorationCorrosedBlock);
         

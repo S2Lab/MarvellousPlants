@@ -11,6 +11,7 @@ import net.minecraft.world.World;
 import java.util.Random;
 
 import firok.mps.ability.CauseMotion;
+import firok.mps.creativetab.CreativeTabsLoader;
 
 public class GrassElasticFern extends BlockGrass
 {
@@ -20,6 +21,7 @@ public class GrassElasticFern extends BlockGrass
 	{
 		super();
 		this.setUnlocalizedName("elasticFern");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 	}
 	
 	@Override

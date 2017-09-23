@@ -1,5 +1,6 @@
 package firok.mps.item;
 
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.item.Item;
 
 public class MaterialRichChargePetal extends Item
@@ -10,5 +11,6 @@ public class MaterialRichChargePetal extends Item
 	{
 		super();
 		this.setUnlocalizedName("materialChargePetal");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 	}
 }

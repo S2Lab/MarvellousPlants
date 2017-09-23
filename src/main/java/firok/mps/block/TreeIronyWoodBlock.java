@@ -1,5 +1,6 @@
 package firok.mps.block;
 
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -11,5 +12,6 @@ public class TreeIronyWoodBlock extends Block
 	{
 		super(Material.IRON);
 		this.setUnlocalizedName("ironyWoodBlock");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 	}
 }

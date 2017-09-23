@@ -12,6 +12,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import firok.mps.ability.*;
+import firok.mps.creativetab.CreativeTabsLoader;
 
 public class FunctionalSummonner extends Item
 {
@@ -19,6 +20,7 @@ public class FunctionalSummonner extends Item
 	{
 		super();
 		this.setUnlocalizedName("summonner");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 		this.setMaxStackSize(1);
 	}
 	

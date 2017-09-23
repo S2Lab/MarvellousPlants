@@ -2,6 +2,7 @@ package firok.mps.block;
 
 import firok.mps.ability.CauseTeleportation;
 import firok.mps.common.ConfigLoader;
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -21,6 +22,7 @@ public class DecorationEnderBlock extends Block
 	{
 		super(Material.GROUND);
 		this.setUnlocalizedName("enderBlock");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 	}
 	
 	// 获取传送距离

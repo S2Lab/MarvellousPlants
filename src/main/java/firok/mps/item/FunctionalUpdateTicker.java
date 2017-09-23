@@ -2,6 +2,7 @@ package firok.mps.item;
 
 import java.util.List;
 
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -19,6 +20,7 @@ public class FunctionalUpdateTicker extends Item
 	{
 		super();
 		this.setUnlocalizedName("updateTicker");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 	}
 	
 	@Override

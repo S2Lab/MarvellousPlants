@@ -1,5 +1,6 @@
 package firok.mps.block;
 
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.state.IBlockState;
@@ -15,6 +16,7 @@ public class FlowerWoodenRootFlower extends BlockBush
 	{
 		super();
 		this.setUnlocalizedName("woodenRootFlower");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 	}
 	
 	// 判断是否能种植在选定的方块上

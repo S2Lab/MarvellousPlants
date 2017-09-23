@@ -3,6 +3,7 @@ package firok.mps.block;
 import java.util.Random;
 
 import firok.mps.common.ConfigLoader;
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.state.IBlockState;
@@ -23,12 +24,15 @@ public class FlowerWisdomFlower extends BlockBush
 		super();
 		this.setTickRandomly(true);
 		this.setUnlocalizedName("wisdomFlower");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 		amountXP=ConfigLoader.flowerWiserFlowerXPAmount;
 	}
 	
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random random)
     {
+		if(worldIn.isRemote)
+			return;
 		Entity xpball=new EntityXPOrb(worldIn, 0, 5, 0, amountXP);
 		xpball.setPosition(pos.getX(),pos.getY(),pos.getZ());
 		worldIn.spawnEntityInWorld(xpball);

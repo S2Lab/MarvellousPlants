@@ -1,5 +1,6 @@
 package firok.mps.block;
 
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.block.BlockBush;
 
 public class FlowerEmberDaisy extends BlockBush
@@ -10,5 +11,6 @@ public class FlowerEmberDaisy extends BlockBush
 	{
 		super();
 		this.setUnlocalizedName("emberDaisy");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 	}
 }

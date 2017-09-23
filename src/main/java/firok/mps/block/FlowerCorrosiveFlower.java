@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 import firok.mps.common.ConfigLoader;
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.state.IBlockState;
@@ -29,6 +30,7 @@ public class FlowerCorrosiveFlower extends BlockBush
 		super();
 		this.setTickRandomly(true);
 		this.setUnlocalizedName("corrosiveFlower");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 		corroseSpeed=ConfigLoader.flowerCorrosiveFlowerCorroseSpeed;
 		corroseRadius=ConfigLoader.minEffectRadius+ConfigLoader.flowerCorrosiveFlowerCorroseRadius;
 		

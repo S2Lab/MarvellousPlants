@@ -3,6 +3,7 @@ package firok.mps.block;
 import java.util.Random;
 
 import firok.mps.common.ConfigLoader;
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -22,6 +23,7 @@ public class FlowerFrostyLotus extends BlockBush{
 		super();
 		this.setTickRandomly(true);
 		this.setUnlocalizedName("frostyLotus");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 		freezeSpeed=ConfigLoader.flowerFrostyLotusFreezeSpeed;
 		freezeRadius=ConfigLoader.flowerFrostyLotusFreezeRadius;
 	}

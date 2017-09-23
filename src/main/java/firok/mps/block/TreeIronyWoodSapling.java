@@ -7,6 +7,7 @@ import java.util.Random;
 import javax.annotation.Nullable;
 
 import firok.mps.common.ConfigLoader;
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyInteger;
@@ -54,6 +55,7 @@ public class TreeIronyWoodSapling extends Block
 		this.setDefaultState(this.blockState.getBaseState().withProperty(GrowthStage, 0));
 		this.setTickRandomly(true);
 		this.setUnlocalizedName("ironyWoodSapling");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 	}
 	
 	@Override

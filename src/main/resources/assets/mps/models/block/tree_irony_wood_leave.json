@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "mps:blocks/tree_irony_wood_leave"
+	}
+}

@@ -3,6 +3,7 @@ package firok.mps.block;
 import java.util.Random;
 
 import firok.mps.common.ConfigLoader;
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.block.BlockMushroom;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -23,6 +24,7 @@ public class MushroomEnderMushroom extends BlockMushroom
 	{
 		super();
 		this.setUnlocalizedName("enderMushroom");
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 	}
 	
 	// 获取传送距离
