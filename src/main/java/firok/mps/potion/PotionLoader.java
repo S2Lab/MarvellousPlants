@@ -2,7 +2,6 @@ package firok.mps.potion;
 
 import firok.mps.MPs;
 import firok.mps.common.ConfigLoader;
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

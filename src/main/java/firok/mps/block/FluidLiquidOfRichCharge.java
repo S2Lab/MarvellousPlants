@@ -21,6 +21,7 @@ public class FluidLiquidOfRichCharge extends BlockFluidClassic
         this.setCreativeTab(CreativeTabsLoader.tabMPs);
     }
 	
+	@Override
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
 		if((entityIn instanceof EntityLivingBase) && worldIn.rand.nextDouble()<=0.02)

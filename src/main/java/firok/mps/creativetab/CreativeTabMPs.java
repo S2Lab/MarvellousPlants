@@ -1,5 +1,4 @@
 package firok.mps.creativetab;
-import firok.mps.item.ItemLoader;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;

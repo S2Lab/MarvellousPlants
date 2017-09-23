@@ -1,9 +1,6 @@
 package firok.mps.item;
 
 import net.minecraft.item.ItemFood;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
-import net.minecraftforge.client.event.GuiScreenEvent.PotionShiftEvent;
 
 public class FoodEclipseFruit extends ItemFood
 {

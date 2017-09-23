@@ -1,15 +1,6 @@
 package firok.mps.fluid;
 
-import java.util.HashMap;
-
 import firok.mps.MPs;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.monster.EntitySkeleton;
-import net.minecraft.entity.monster.EntitySlime;
-import net.minecraft.entity.monster.EntitySpider;
-import net.minecraft.entity.monster.EntityZombie;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 

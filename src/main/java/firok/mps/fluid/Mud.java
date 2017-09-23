@@ -2,8 +2,6 @@ package firok.mps.fluid;
 
 import firok.mps.*;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 

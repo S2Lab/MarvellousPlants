@@ -1,17 +1,8 @@
 package firok.mps.potion;
 
-import firok.mps.MPs;
-
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.MobEffects;
 import net.minecraft.potion.Potion;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.world.World;
 
 public class Folly extends Potion
 {
@@ -29,12 +20,14 @@ public class Folly extends Potion
 		this.setIconIndex(0, 0);
 	}
 	
+	@Override
 	public boolean isReady(int duration, int amplifier)
     {
 		int k = 40 >> amplifier;
         return k > 0 ? duration % k == 0 : true;
     }
 	
+	@Override
 	public void performEffect(EntityLivingBase entityLivingBaseIn, int p_76394_2_)
     {
         // p_76394_2_ == 效果等级

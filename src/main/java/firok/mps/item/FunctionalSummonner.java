@@ -1,6 +1,5 @@
 package firok.mps.item;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -25,6 +24,7 @@ public class FunctionalSummonner extends Item
 	}
 	
 	// 以后改实体类型
+	@Override
 	@SideOnly(Side.CLIENT)
 	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand)
     {

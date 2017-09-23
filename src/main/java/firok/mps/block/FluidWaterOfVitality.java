@@ -8,7 +8,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -23,6 +22,7 @@ public class FluidWaterOfVitality extends BlockFluidClassic
         this.setCreativeTab(CreativeTabsLoader.tabMPs);
     }
 	
+	@Override
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
 		if(entityIn instanceof EntityItem)
@@ -31,7 +31,7 @@ public class FluidWaterOfVitality extends BlockFluidClassic
 			if(WaterOfVitality.hasSummon(item))
 			{
 				((EntityItem) entityIn).getEntityItem().stackSize--;
-				CauseSummon.CenteredAt(worldIn,(double)pos.getX(),(double)pos.getY()+1,(double)pos.getZ(),WaterOfVitality.getSummon(item));
+				CauseSummon.CenteredAt(worldIn,pos.getX(),(double)pos.getY()+1,pos.getZ(),WaterOfVitality.getSummon(item));
 			}
 		}
     }

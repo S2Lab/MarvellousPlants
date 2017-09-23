@@ -1,7 +1,5 @@
 package firok.mps.ability;
 
-import java.util.Random;
-
 import net.minecraft.client.particle.Particle;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;

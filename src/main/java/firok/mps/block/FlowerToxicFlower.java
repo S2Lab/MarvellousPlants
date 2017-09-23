@@ -1,7 +1,5 @@
 package firok.mps.block;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Random;
 
 import firok.mps.common.ConfigLoader;

@@ -1,7 +1,6 @@
 package firok.mps.entity;
 
 import firok.mps.MPs;
-import firok.mps.entity.throwable.*;
 import net.minecraft.entity.Entity;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 

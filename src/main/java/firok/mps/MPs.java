@@ -3,8 +3,6 @@ package firok.mps;
 import java.util.Random;
 
 import firok.mps.common.CommonProxy;
-import firok.mps.creativetab.CreativeTabsLoader;
-import firok.mps.item.ItemLoader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;

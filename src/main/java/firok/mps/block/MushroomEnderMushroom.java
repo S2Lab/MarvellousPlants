@@ -1,7 +1,5 @@
 package firok.mps.block;
 
-import java.util.Random;
-
 import firok.mps.common.ConfigLoader;
 import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.block.BlockMushroom;

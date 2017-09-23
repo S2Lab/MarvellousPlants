@@ -2,6 +2,7 @@ package firok.mps.block;
 
 import java.util.Random;
 
+import firok.mps.creativetab.CreativeTabsLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -18,5 +19,6 @@ public class BlockSmokerBlock extends Block
 	public BlockSmokerBlock()
 	{
 		super(Material.GROUND);
+		this.setCreativeTab(CreativeTabsLoader.tabMPs);
 	}
 }

@@ -4,7 +4,6 @@ import java.util.Random;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.potion.Potion;
 
 public class SpaceUnstable extends Potion
@@ -21,12 +20,14 @@ public class SpaceUnstable extends Potion
 		this.setIconIndex(0, 0);
 	}
 	
+	@Override
 	public boolean isReady(int duration, int amplifier)
     {
 		int k = 80 >> amplifier;
         return k > 0 ? duration % k == 0 : true;
     }
 	
+	@Override
 	public void performEffect(EntityLivingBase entityLivingBaseIn, int p_76394_2_)
     {
         // p_76394_2_ == 效果等级

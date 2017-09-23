@@ -1,6 +1,5 @@
 package firok.mps.item;
 
-import firok.mps.item.*;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;

@@ -21,6 +21,7 @@ public class FluidMud extends BlockFluidClassic
         this.setCreativeTab(CreativeTabsLoader.tabMPs);
     }
 	
+	@Override
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
 		if(entityIn instanceof EntityPlayer && ((EntityPlayer) entityIn).isCreative())

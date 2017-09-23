@@ -1,9 +1,7 @@
 package firok.mps.fluid;
 
 import firok.mps.MPs;
-import net.minecraft.command.EntitySelector;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.monster.*;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
