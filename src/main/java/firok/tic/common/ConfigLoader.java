@@ -74,6 +74,11 @@ public class ConfigLoader
     		"黩武状态效果的id",
     		"");
     
+    public static int idPotionPainbound=57;
+    public LangItem LIidPotionPainbound=new LangItem(
+    		"痛苦链接状态效果的id",
+    		"");
+    
     // Enchantment // 附魔相关
     public static int idEnchantmentCulling=65;
     public LangItem LIidEnchantmentCulling=new LangItem(

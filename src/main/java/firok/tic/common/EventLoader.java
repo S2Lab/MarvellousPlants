@@ -1,7 +1,10 @@
 package firok.tic.common;
 
+import java.util.List;
+
 import firok.tic.enchantment.EnchantmentLoader;
 import firok.tic.potion.PotionLoader;
+import net.minecraft.client.particle.ParticleFlame;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
@@ -13,6 +16,7 @@ import net.minecraft.network.datasync.DataSerializer;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.*;
@@ -63,24 +67,43 @@ public class EventLoader
     @SubscribeEvent
     public void onEntityAttacking(LivingAttackEvent event)
     {
-    	/*
-    	EntityLivingBase entity=event.getEntityLiving();
-    	if(entity instanceof EntityPlayer)
-		{
-			EntityPlayer player=(EntityPlayer)entity;
-			
-			int size=player.inventory.getSizeInventory();
-			for(int step=0;step<size;step++)
-			{
-				ItemStack itemstack=player.inventory.getStackInSlot(step);
-				if(itemstack!=null && itemstack.getItem()!=null ))
-				{
-					return; // 找到贵重物品 返回
-				}
-			}
-			
-			player.attackEntityFrom(new firok.tic.DamageSources.AvariceDamege(), (float) (2+p_76394_2_*2.5));
-		}*/
+    	System.out.println("on entity attacking , name=="+event.getEntityLiving().getName()+" amount=="+event.getAmount());
+    	event.getAmount();
+    	// 痛苦链接 debuff效果
+    	EntityLivingBase center=event.getEntityLiving();
+    	PotionEffect painbound_center=center.getActivePotionEffect(PotionLoader.painbound);
+    	if(painbound_center==null) // 如果被打中的生物没有这个debuff 则直接返回
+    		return;
+    	
+    	int level=painbound_center.getAmplifier(); // 获取等级
+    	double r=level * 2.5; // 计算范围 // 范围是2.5*debuff等级
+    	
+    	World world=center.getEntityWorld();
+    	
+    	List<Entity> entities
+    		=world.getEntitiesWithinAABBExcludingEntity(center, new AxisAlignedBB
+    			(-r, -r, -r, r, r, r));
+    	for(Entity entity_temp : entities)
+    	{
+    		if(entity_temp instanceof EntityLiving)
+    		{
+    			EntityLiving living =(EntityLiving) entity_temp;
+    			PotionEffect painbound_temp=living.getActivePotionEffect(PotionLoader.painbound);
+    			if(painbound_temp==null) // 如果这个实体没有痛苦链接debuff 则计算下一个实体
+    				continue;
+    			
+    			int level_temp=painbound_temp.getAmplifier(); // 获取等级
+    			
+    			// 求两个等级的平均值
+    			float level_aver=(float) ((level*1.0+level_temp)/2);
+    			
+    			// 给予等级*30%的伤害
+    			entity_temp.attackEntityFrom(new firok.tic.DamageSources.PainboundDamege(), (float) (level_aver*0.3*event.getAmount()));
+    			
+    			// 渲染粒子效果 // 暂时不管这个
+    			// firok.tic.ability.CauseParticlesLine(center.getEntityWorld(),center,entity_temp,new ParticleFlame(),100);
+    		}
+    	}
     }
     
     @SubscribeEvent

@@ -22,4 +22,13 @@ public class DamageSources
 			this.setDamageIsAbsolute();
 		}
 	}
+	static public class PainboundDamege extends DamageSource
+	{
+		public PainboundDamege()
+		{
+			super("painboundDamage");
+			this.setDamageBypassesArmor();
+			this.setDamageIsAbsolute();
+		}
+	}
 }
