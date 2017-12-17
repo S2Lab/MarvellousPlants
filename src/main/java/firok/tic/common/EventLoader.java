@@ -36,6 +36,13 @@ public class EventLoader
     public void onPlayerDamaged(LivingHurtEvent event)
     {
     	EntityLivingBase entity= event.getEntityLiving();
+    	
+    	EntityLivingBase attacker=entity.getLastAttacker();
+    	if(attacker!=null)
+    		System.out.println("entity "+entity.getName() +" is attacking by "+attacker.getName());
+    	else
+    		System.out.println("entity "+entity.getName() +" is attacking by someone");
+    	
     	if(entity.getActivePotionEffect(PotionLoader.folly)!=null) // 愚者状态的效果 会覆盖 智者状态的效果
     	{
     		event.setAmount(
@@ -65,12 +72,15 @@ public class EventLoader
     }
     
     @SubscribeEvent
-    public void onEntityAttacking(LivingAttackEvent event)
+    public void buffPainbound_Hurt(LivingAttackEvent event)
     {
-    	System.out.println("on entity attacking , name=="+event.getEntityLiving().getName()+" amount=="+event.getAmount());
-    	event.getAmount();
+    	if(event.getAmount()<4)
+    		return;
     	// 痛苦链接 debuff效果
     	EntityLivingBase center=event.getEntityLiving();
+    	if(event.getSource() instanceof firok.tic.DamageSources.PainboundDamege)
+    		return; // 如果受到的伤害已经是痛苦链接造成的伤害 不造成二次伤害
+    	
     	PotionEffect painbound_center=center.getActivePotionEffect(PotionLoader.painbound);
     	if(painbound_center==null) // 如果被打中的生物没有这个debuff 则直接返回
     		return;
@@ -107,7 +117,38 @@ public class EventLoader
     }
     
     @SubscribeEvent
-    public void onPlayerAttacking(AttackEntityEvent event)
+    public void enchantmentCulling_buff(LivingExperienceDropEvent event)
+    {
+    	EntityPlayer entity=event.getAttackingPlayer();
+    	
+    	if(!(entity instanceof EntityPlayer))
+    		return;
+
+		EntityPlayer player=(EntityPlayer)entity;
+		ItemStack currentItemStack=player.inventory.getCurrentItem();
+		
+		if(currentItemStack!=null)
+		{
+			// 淘汰附魔效果
+			int level=EnchantmentHelper.getEnchantmentLevel(EnchantmentLoader.culling, currentItemStack);
+			
+			if(level>0)
+			{
+				// 判断玩家当前的buff状态 给玩家一个速度buff
+				Potion speed=Potion.getPotionById(1);
+				PotionEffect old_effect=player.getActivePotionEffect(speed);
+				if(old_effect==null || old_effect.getAmplifier() < level)
+					player.addPotionEffect(new PotionEffect(speed, level*200, level, false, true));
+				else if(old_effect.getAmplifier() == level)
+				{
+					int old_duration=old_effect.getDuration();
+					player.addPotionEffect(new PotionEffect(speed, old_duration+level*200, level, false, true));
+				}
+			}
+		}
+    }
+    @SubscribeEvent
+    public void enchantmentCulling_kill(AttackEntityEvent event)
     {
     	// 淘汰附魔效果
     	EntityPlayer player=event.getEntityPlayer();
@@ -121,7 +162,7 @@ public class EventLoader
 				if(target instanceof EntityLiving)
 				{
 					EntityLiving living=(EntityLiving) target;
-					if(living.getMaxHealth() / living.getHealth() < 0.1)
+					if(living.getMaxHealth() / living.getHealth() < 0.1) // 斩杀血线低于10%的生物
 					{
 						living.onKillCommand();
 					}
@@ -133,6 +174,7 @@ public class EventLoader
     @SubscribeEvent
     public void onEntitySetAttackTarget(LivingSetAttackTargetEvent event)
     {
+    	/*
     	EntityLivingBase entity=event.getEntityLiving();
     	World world=entity.getEntityWorld();
     	
@@ -140,13 +182,9 @@ public class EventLoader
     	
     	entity.getEntityData().setLong("time_last_attack", time_now);
     	EntityDataManager dm=entity.getDataManager();
-    	// dm.createKey(null, null);
+    	// dm.createKey(null, null);*/
     }
-    @SubscribeEvent
-    public void onLivingHurting(LivingHurtEvent event)
-    {
-    	;
-    }
+    
     
     @SubscribeEvent
     public void onLivingDeath(LivingDeathEvent event)
@@ -154,33 +192,33 @@ public class EventLoader
     	;
     }
     
+    
+    
     @SubscribeEvent
-    public void onLivingExperienceDropping(LivingExperienceDropEvent event)
+    public void buffLifecurse(LivingHealEvent event)
     {
-    	EntityPlayer entity=event.getAttackingPlayer();
-
-		EntityPlayer player=(EntityPlayer)entity;
-		ItemStack currentItemStack=player.inventory.getCurrentItem();
-		
-		if(currentItemStack!=null)
-		{
-			// 淘汰附魔效果
-			int level=EnchantmentHelper.getEnchantmentLevel(EnchantmentLoader.culling, currentItemStack);
-			
-			if(level>0)
-			{
-				Potion speed=Potion.getPotionById(1);
-				PotionEffect old_effect=player.getActivePotionEffect(speed);
-				if(old_effect==null || old_effect.getAmplifier() < level)
-					player.addPotionEffect(new PotionEffect(speed, level*200, level, false, true));
-				else if(old_effect.getAmplifier() == level)
-				{
-					int old_duration=old_effect.getDuration();
-					player.addPotionEffect(new PotionEffect(speed, old_duration+level*200, level, false, true));
-				}
-			}
-		}
+    	EntityLivingBase entity=event.getEntityLiving();
+    	if(entity.getActivePotionEffect(PotionLoader.lifecursed) ==null)
+    		return;
+    	if(entity instanceof EntityPlayer && ((EntityPlayer) entity).isCreative())
+    		return;
+    	
+    	event.setCanceled(true);
+    	// 渲染粒子效果 // 暂时不处理
+    	// firok.tic.ability.CauseParticlesBall.CenteredAt(worldIn, posIn, radiusIn, particleIn, dencityIn);
     }
+    @SubscribeEvent
+    public void buffLifeblessed(LivingHealEvent event)
+    {
+    	EntityLivingBase entity=event.getEntityLiving();
+    	if(entity.getActivePotionEffect(PotionLoader.lifeblessed) ==null)
+    		return;
+    	
+    	event.setAmount(event.getAmount()*2); // 双倍治疗
+    	// 渲染粒子效果 // 暂时不处理
+    	// firok.tic.ability.CauseParticlesBall.CenteredAt(worldIn, posIn, radiusIn, particleIn, dencityIn);
+    }
+    
     
      
 }

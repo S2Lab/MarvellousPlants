@@ -22,6 +22,8 @@ public class PotionLoader
 	public static Potion thresholded	=new Thresholded();
 	public static Potion militaristic	=new Militaristic();
 	public static Potion painbound		=new Painbound();
+	public static Potion lifecursed		=new Lifecursed();
+	public static Potion lifeblessed	=new Lifeblessed();
 	
 
     public PotionLoader(FMLPreInitializationEvent event)
@@ -35,6 +37,8 @@ public class PotionLoader
     	registerPotion(ConfigLoader.idPotionThresholded,"thresholded",thresholded);
     	registerPotion(ConfigLoader.idPotionMilitaristic,"militaristic",militaristic);
     	registerPotion(ConfigLoader.idPotionPainbound,"painbound",painbound);
+    	registerPotion(ConfigLoader.idPotionLifecursed,"lifecurse",lifecursed);
+    	registerPotion(ConfigLoader.idPotionLifeblessed,"lifeblessed",lifeblessed);
     }
     
     private void registerPotion(int potionIdIn,String potionNameIn,Potion potionIn)

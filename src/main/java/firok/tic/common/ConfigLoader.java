@@ -79,6 +79,16 @@ public class ConfigLoader
     		"痛苦链接状态效果的id",
     		"");
     
+    public static int idPotionLifecursed=58;
+    public LangItem LIidPotionLifecursed=new LangItem(
+    		"生命诅咒状态效果的id",
+    		"");
+    
+    public static int idPotionLifeblessed=59;
+    public LangItem LIidPotionLifeblessed=new LangItem(
+    		"生命祝福状态效果的id",
+    		"");
+    
     // Enchantment // 附魔相关
     public static int idEnchantmentCulling=65;
     public LangItem LIidEnchantmentCulling=new LangItem(
