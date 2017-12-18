@@ -10,16 +10,16 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
-public class Culling extends Enchantment{
+public class Tearing extends Enchantment{
 	// 淘汰
 	// 直接秒杀血量低于10%的生物
 	// 并且给玩家一个10秒速度1buff 连续击杀会延长时间
 	
-	public Culling()
+	public Tearing()
     {
 		super(Enchantment.Rarity.RARE, EnumEnchantmentType.WEAPON, new EntityEquipmentSlot[] {EntityEquipmentSlot.MAINHAND});
         
-        this.setName("culling");
+        this.setName("tearing");
     }
 
     @Override

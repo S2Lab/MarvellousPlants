@@ -16,6 +16,7 @@ public class ItemLoader
 	public static Item functionalUpdateTicker=new FunctionalUpdateTicker();
 	
 	public static Item functionalSummonner=new FunctionalSummonner();
+	public static Item functionalSmokingBomb=new FunctionalSmokingBomb();
 	
 	public static Item materialRichChargePetal=new MaterialRichChargePetal();
 	
@@ -29,6 +30,7 @@ public class ItemLoader
         register(functionalUpdateTicker,"functional_update_ticker");
         
         register(functionalSummonner,"functional_summonner");
+        register(functionalSmokingBomb,"functional_smoking_bomb");
         
         register(materialRichChargePetal,"material_rich_charge_petal");
     }

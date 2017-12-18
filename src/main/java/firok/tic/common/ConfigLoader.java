@@ -95,6 +95,11 @@ public class ConfigLoader
     		"淘汰附魔的id",
     		"");
     
+    public static int idEnchantmentTearing=65;
+    public LangItem LIidEnchantmentTearing=new LangItem(
+    		"撕裂附魔的id",
+    		"");
+    
     // Item // 物品相关
     public static int itemStoneOfCoronaExplosionRadius=20;
     public LangItem LIitemStoneOfCoronaExplosionPower=new LangItem(

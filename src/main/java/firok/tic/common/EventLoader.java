@@ -38,10 +38,12 @@ public class EventLoader
     	EntityLivingBase entity= event.getEntityLiving();
     	
     	EntityLivingBase attacker=entity.getLastAttacker();
+    	/*
     	if(attacker!=null)
     		System.out.println("entity "+entity.getName() +" is attacking by "+attacker.getName());
     	else
     		System.out.println("entity "+entity.getName() +" is attacking by someone");
+    	*/
     	
     	if(entity.getActivePotionEffect(PotionLoader.folly)!=null) // 愚者状态的效果 会覆盖 智者状态的效果
     	{
@@ -169,6 +171,35 @@ public class EventLoader
 				}
 			}
 		}
+    }
+    
+    @SubscribeEvent
+    public void enchantmentTearing_buff(AttackEntityEvent event)
+    {
+    	EntityPlayer player=event.getEntityPlayer();
+    	Entity _target=event.getTarget();
+    	
+    	// 撕裂附魔
+    	
+    	if(!(_target instanceof EntityLivingBase)) // 不是生物的话就返回
+	    	return;
+    	
+    	EntityLivingBase target=(EntityLivingBase)_target;
+    	
+    	ItemStack currentItemStack=player.inventory.getCurrentItem();
+    	if(currentItemStack!=null)
+    	{
+    		int level=EnchantmentHelper.getEnchantmentLevel(EnchantmentLoader.tearing, currentItemStack);
+    		if(level<=0)
+    			return;
+    		
+    		;
+    	}
+    }
+    @SubscribeEvent
+    public void enchantmentTearing_damage(LivingAttackEvent event)
+    {
+    	;
     }
     
     @SubscribeEvent
