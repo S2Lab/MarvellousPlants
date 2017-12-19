@@ -9,29 +9,29 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 
-public class Lifecursed extends Potion
+public class Teared extends Potion
 {
-
-	// 生命诅咒
-	// 无法恢复生命
+	// 被撕裂 debuff
+	// 受到的伤害加深debuff等级*30%
 	
-	public Lifecursed()
+	public Teared()
 	{
-		// 是负面效果  深紫红色
-		super(true, 0x4C1130);
-        this.setPotionName("potion.lifecursed");
+		// 是负面效果 暗血红色
+		super(true, 0x610C0C);
+        this.setPotionName("potion.teared");
 		this.setIconIndex(0, 0);
 	}
 	
 	@Override
 	public boolean isReady(int duration, int amplifier)
     {
-		return true;
+		return false;
     }
 	
 	@Override
 	public void performEffect(EntityLivingBase entityLivingBaseIn, int p_76394_2_)
     {
-        ;
+        // p_76394_2_ == 效果等级
+		;
     }
 }

@@ -8,6 +8,7 @@ import net.minecraft.client.particle.ParticleFlame;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.*;
+import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -193,14 +194,41 @@ public class EventLoader
     		if(level<=0)
     			return;
     		
-    		;
+    		// 先刷新一下当前的buff
+    		target.addPotionEffect(new PotionEffect(PotionLoader.teared,level*100,level));
+    		
+    		// 然后判断实体身上有没有已经有的效果
     	}
     }
     @SubscribeEvent
     public void enchantmentTearing_damage(LivingAttackEvent event)
     {
-    	;
+    	if(event.getEntityLiving() instanceof EntityBat)
+    		return;
+    	
+    	if(event.getSource() instanceof firok.tic.DamageSources.TearingDamege )
+    		return;
+    	
+    	System.out.println("实体受到攻击 初始血量"+event.getEntityLiving().getHealth()+"  本次伤害"+event.getAmount()+"  伤害类型"+event.getSource().getDamageType());
+    	
+    	EntityLivingBase entity=event.getEntityLiving();
+    	PotionEffect teared=entity.getActivePotionEffect(PotionLoader.teared);
+    	
+    	if(teared==null)
+    		return;
+    	
+    	System.out.println("撕裂debuff生效 等级"+teared.getAmplifier()+"  剩余时间"+teared.getDuration());
+    	
+    	System.out.println(entity.getName()+" 实体受到伤害加深 "+(float) (event.getAmount() * teared.getAmplifier() * 0.3)+" 点");
+    	
+    	// 伤害加深 debuff等级*0.3
+		// entity.attackEntityFrom(
+		//    			new firok.tic.DamageSources.TearingDamege(),
+		//    			(float) (event.getAmount() * teared.getAmplifier() * 0.3));
+    	entity.setHealth((float) (entity.getHealth() - event.getAmount() * teared.getAmplifier() * 0.3));
+    	
     }
+    
     
     @SubscribeEvent
     public void onEntitySetAttackTarget(LivingSetAttackTargetEvent event)

@@ -20,7 +20,7 @@ public class Thresholded extends Potion
 	@Override
 	public boolean isReady(int duration, int amplifier)
     {
-		return true;
+		return false;
 		/*
 		int k = 40 >> amplifier;
         return k > 0 ? duration % k == 0 : true;

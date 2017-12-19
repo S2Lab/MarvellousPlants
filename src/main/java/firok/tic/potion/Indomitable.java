@@ -20,11 +20,7 @@ public class Indomitable extends Potion
 	@Override
 	public boolean isReady(int duration, int amplifier)
     {
-		return true;
-		/*
-		int k = 40 >> amplifier;
-        return k > 0 ? duration % k == 0 : true;
-        */
+		return false;
     }
 	
 	@Override

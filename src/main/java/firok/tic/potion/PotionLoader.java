@@ -24,6 +24,7 @@ public class PotionLoader
 	public static Potion painbound		=new Painbound();
 	public static Potion lifecursed		=new Lifecursed();
 	public static Potion lifeblessed	=new Lifeblessed();
+	public static Potion teared			=new Teared();
 	
 
     public PotionLoader(FMLPreInitializationEvent event)
@@ -39,6 +40,7 @@ public class PotionLoader
     	registerPotion(ConfigLoader.idPotionPainbound,"painbound",painbound);
     	registerPotion(ConfigLoader.idPotionLifecursed,"lifecurse",lifecursed);
     	registerPotion(ConfigLoader.idPotionLifeblessed,"lifeblessed",lifeblessed);
+    	registerPotion(ConfigLoader.idPotionTeared,"teared",teared);
     }
     
     private void registerPotion(int potionIdIn,String potionNameIn,Potion potionIn)

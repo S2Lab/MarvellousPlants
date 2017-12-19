@@ -89,13 +89,18 @@ public class ConfigLoader
     		"生命祝福状态效果的id",
     		"");
     
+    public static int idPotionTeared=60;
+    public LangItem LIidPotionTeared=new LangItem(
+    		"被撕裂状态效果的id",
+    		"");
+    
     // Enchantment // 附魔相关
     public static int idEnchantmentCulling=65;
     public LangItem LIidEnchantmentCulling=new LangItem(
     		"淘汰附魔的id",
     		"");
     
-    public static int idEnchantmentTearing=65;
+    public static int idEnchantmentTearing=66;
     public LangItem LIidEnchantmentTearing=new LangItem(
     		"撕裂附魔的id",
     		"");

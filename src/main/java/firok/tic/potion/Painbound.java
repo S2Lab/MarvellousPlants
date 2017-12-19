@@ -15,7 +15,7 @@ public class Painbound extends Potion{
 	@Override
 	public boolean isReady(int duration, int amplifier)
     {
-		return true;
+		return false;
     }
 	
 	@Override

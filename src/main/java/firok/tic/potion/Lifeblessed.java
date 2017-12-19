@@ -19,20 +19,19 @@ public class Lifeblessed extends Potion
 	{
 		// 不是负面效果  粉红色
 		super(false, 0xFF00CC);
-        this.setPotionName("potion.lifecurse");
+        this.setPotionName("potion.lifeblessed");
 		this.setIconIndex(0, 0);
 	}
 	
 	@Override
 	public boolean isReady(int duration, int amplifier)
     {
-		return true;
+		return false;
     }
 	
 	@Override
 	public void performEffect(EntityLivingBase entityLivingBaseIn, int p_76394_2_)
     {
-        // p_76394_2_ == 效果等级
-		;
+        ;
     }
 }
