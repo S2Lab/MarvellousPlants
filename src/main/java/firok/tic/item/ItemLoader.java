@@ -20,6 +20,8 @@ public class ItemLoader
 	
 	public static Item materialRichChargePetal=new MaterialRichChargePetal();
 	
+	public static Item equiLightningStick=new EquiLightningStick();
+	
 
     public ItemLoader(FMLPreInitializationEvent event)
     {
@@ -33,6 +35,8 @@ public class ItemLoader
         register(functionalSmokingBomb,"functional_smoking_bomb");
         
         register(materialRichChargePetal,"material_rich_charge_petal");
+        
+        register(equiLightningStick,"equi_lightning_stick");
     }
     
     @SideOnly(Side.CLIENT)

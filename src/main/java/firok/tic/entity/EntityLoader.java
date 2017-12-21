@@ -1,6 +1,7 @@
 package firok.tic.entity;
 
 import firok.tic.TIC;
+import firok.tic.entity.throwable.*;
 import net.minecraft.entity.Entity;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
@@ -13,6 +14,7 @@ public class EntityLoader
 		// Entity.class, nameOfEntity, trackingRange, updateFrequency, sendsVelocityUpdates
 		// 实体class 实体名称 追踪距离 更新频率 是否速度更新
 		// registerEntity(EntityTowerOrb.class,"TowerOrb",64,3,true);
+		registerEntity(OrbCharge.class,"OrbCharge",64,2,true);
 	}
 	
 	private static void registerEntity(Class<? extends Entity> entityClass, String name, int trackingRange,

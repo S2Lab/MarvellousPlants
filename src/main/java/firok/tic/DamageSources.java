@@ -31,13 +31,4 @@ public class DamageSources
 			this.setDamageIsAbsolute();
 		}
 	}
-	static public class TearingDamege extends DamageSource
-	{
-		public TearingDamege()
-		{
-			super("tearingDamage");
-			this.setDamageBypassesArmor();
-			this.setDamageIsAbsolute();
-		}
-	}
 }

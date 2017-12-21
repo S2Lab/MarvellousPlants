@@ -14,15 +14,15 @@ public class EnchantmentLoader {
         culling=new Culling();
         tearing=new Tearing();
         
-        register(ConfigLoader.idEnchantmentCulling,culling,new ResourceLocation("culling"));
-        register(ConfigLoader.idEnchantmentTearing,tearing,new ResourceLocation("tearing"));
+        register(ConfigLoader.idEnchantmentCulling,culling,"culling");
+        register(ConfigLoader.idEnchantmentTearing,tearing,"tearing");
     }
     
-    public static void register(int idIn,Enchantment enchIn,ResourceLocation reIn)
+    public static void register(int idIn,Enchantment enchIn,String nameIn)
     {
     	try
         {
-            Enchantment.REGISTRY.register(idIn, reIn, enchIn);
+            Enchantment.REGISTRY.register(idIn, new ResourceLocation(firok.tic.TIC.MODID+":"+nameIn), enchIn);
         }
         catch (Exception e)
         {

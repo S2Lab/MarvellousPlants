@@ -206,25 +206,12 @@ public class EventLoader
     	if(event.getEntityLiving() instanceof EntityBat)
     		return;
     	
-    	if(event.getSource() instanceof firok.tic.DamageSources.TearingDamege )
-    		return;
-    	
-    	System.out.println("实体受到攻击 初始血量"+event.getEntityLiving().getHealth()+"  本次伤害"+event.getAmount()+"  伤害类型"+event.getSource().getDamageType());
-    	
     	EntityLivingBase entity=event.getEntityLiving();
     	PotionEffect teared=entity.getActivePotionEffect(PotionLoader.teared);
     	
     	if(teared==null)
     		return;
     	
-    	System.out.println("撕裂debuff生效 等级"+teared.getAmplifier()+"  剩余时间"+teared.getDuration());
-    	
-    	System.out.println(entity.getName()+" 实体受到伤害加深 "+(float) (event.getAmount() * teared.getAmplifier() * 0.3)+" 点");
-    	
-    	// 伤害加深 debuff等级*0.3
-		// entity.attackEntityFrom(
-		//    			new firok.tic.DamageSources.TearingDamege(),
-		//    			(float) (event.getAmount() * teared.getAmplifier() * 0.3));
     	entity.setHealth((float) (entity.getHealth() - event.getAmount() * teared.getAmplifier() * 0.3));
     	
     }
